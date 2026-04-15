@@ -1,4 +1,4 @@
-//UC2
+//UC3
 import java.util.*;
 
 class LineComparison {
@@ -14,12 +14,40 @@ class LineComparison {
         double line1 = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
         double line2 = Math.sqrt(Math.pow(x4 - x3, 2) + Math.pow(y4 - y3, 2));
 
-        if(Double.valueOf(line1).equals(line2))
-            System.out.println("Lines are Equal");
+        int result = Double.compare(line1, line2);
+
+        if(result == 0)
+            System.out.println("Lines are equal");
+        else if(result > 0)
+            System.out.println("Line1 is greater");
         else
-            System.out.println("Lines are Not Equal");
+            System.out.println("Line1 is smaller");
     }
 }
+
+
+//UC2
+// import java.util.*;
+
+// class LineComparison {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+
+//         int x1 = sc.nextInt(), y1 = sc.nextInt();
+//         int x2 = sc.nextInt(), y2 = sc.nextInt();
+
+//         int x3 = sc.nextInt(), y3 = sc.nextInt();
+//         int x4 = sc.nextInt(), y4 = sc.nextInt();
+
+//         double line1 = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+//         double line2 = Math.sqrt(Math.pow(x4 - x3, 2) + Math.pow(y4 - y3, 2));
+
+//         if(Double.valueOf(line1).equals(line2))
+//             System.out.println("Lines are Equal");
+//         else
+//             System.out.println("Lines are Not Equal");
+//     }
+// }
 
 
 
